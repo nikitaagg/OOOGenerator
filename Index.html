@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Out of Office Generator</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Out of Office Generator 🏖️</h1>
+
+    <div class="card">
+
+      <!-- Error Message -->
+      <div id="error" class="error-message" aria-live="assertive"></div>
+
+      <!-- Name -->
+      <div class="row">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" type="text" placeholder="Your name" />
+        </div>
+      </div>
+
+      <!-- Dates -->
+      <div class="row">
+        <div class="field">
+          <label for="startDate">Out from</label>
+          <input type="date" id="startDate" />
+        </div>
+
+        <div class="field">
+          <label for="endDate">Back on</label>
+          <input type="date" id="endDate" />
+        </div>
+      </div>
+
+      <!-- Reason -->
+      <div class="row">
+        <div class="field">
+          <label for="reason">Reason (optional)</label>
+          <input id="reason" type="text" placeholder="Vacation / personal time" />
+        </div>
+      </div>
+
+      <!-- Backup -->
+      <div class="row">
+        <div class="field">
+          <label for="backup">Backup contact</label>
+          <input id="backup" type="text" placeholder="Email or name" />
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <button class="primary-btn" onclick="generateMessage()">Generate Message</button>
+
+      <textarea
+        id="output"
+        rows="8"
+        readonly
+        placeholder="Your generated out-of-office message will appear here..."
+      ></textarea>
+
+      <button class="secondary-btn" onclick="copyMessage()">Copy to Clipboard</button>
+
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="app.js"></script>
+
+</body>
+</html>
